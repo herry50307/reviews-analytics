@@ -13,4 +13,13 @@ with open("reviews.txt","r") as f:
         count+=1
         if count % 10000==0:
             print(len(data))
+print("總共有",len(data),"筆資料")
         
+sumlen = 0
+for d in data: #每一筆字串取出放到d
+    sumlen = sumlen+len(d) #每一筆字串總和相加
+    """
+    print("總共留言長度",sumlen)
+    """
+    
+print("平均留言長度是: ",sumlen/len(data))
