@@ -34,8 +34,14 @@ print("一共有",len(new),"筆資料留言長度小於100")
 print(new[0]) #把第一筆留言長度小於100的資料印出來
 
 
-good = [] #把留言有good的資料抓出來
-for d in data:
-    if "good" in d:
-        good.append(d)
-print("一共有", len(good),"筆資料提到good")
+# good = [] #把留言有good的資料都裝進來list
+# for d in data:
+#     if "good" in d:
+#         good.append(d)
+# print("一共有", len(good),"筆資料提到good") 
+
+#清單快寫法只要資料有good就把1寫入good清單裡面
+# =============================================================================
+# good = [1 for d in data if "good" in d]
+# # print(good)
+# =============================================================================
