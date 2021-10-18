@@ -23,3 +23,19 @@ for d in data: #每一筆字串取出放到d
     """
     
 print("平均留言長度是: ",sumlen/len(data))
+
+
+new = []
+
+for d in data:
+    if len(d) < 100:
+        new.append(d)
+print("一共有",len(new),"筆資料留言長度小於100")
+print(new[0]) #把第一筆留言長度小於100的資料印出來
+
+
+good = [] #把留言有good的資料抓出來
+for d in data:
+    if "good" in d:
+        good.append(d)
+print("一共有", len(good),"筆資料提到good")
